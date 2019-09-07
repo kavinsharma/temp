@@ -1,0 +1,22 @@
+{% if messg %}
+<script>
+    alert('{{ messg }}');
+</script>
+{% endif %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sign</title>
+</head>
+<body>
+<form action="/postbook/" method="post">
+    {% csrf_token %}
+	Number of Days (1|7|30):
+	<input type="number" name="booking"><br><br>
+    Parking Preference:
+    <input type="text" name="prefrence"><br><br>
+	
+    <input type="submit" value="Request Booking">
+</form>
+</body>
+</html>
